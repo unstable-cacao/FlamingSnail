@@ -33,9 +33,11 @@
             "no-api": true
         }
     ],
-    "autoload": {
-        "psr-0": {
-            "FlamingSnail": "Source"
+    "autoload": 
+    {
+        "psr-4": 
+        {
+            "FlamingSnail\\": "Source/"
         }
     }
 }
