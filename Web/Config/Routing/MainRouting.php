@@ -10,7 +10,7 @@ return [
     [
         // All ajax requests
         [
-            'ajax' => 'true',
+            'ajax' => true,
             
             'require' =>
             [
@@ -20,6 +20,14 @@ return [
                     "method"        => "POST",
                     "controller"    => \FlamingSnail\Controllers\AuthenticationController::class,
                     "action"        => 'login'
+                ],
+                
+                // Register action
+                [
+                    "route"         => "register",
+                    "method"        => "POST",
+                    "controller"    => \FlamingSnail\Controllers\AuthenticationController::class,
+                    "action"        => 'register'
                 ]
             ]
         ],
