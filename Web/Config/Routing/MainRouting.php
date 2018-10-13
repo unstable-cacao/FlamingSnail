@@ -3,6 +3,7 @@
 return [
     'controller'    => \FlamingSnail\Controllers\NotFoundController::class,
     'action'        => 'notFound',
+    'decorator'     => \FlamingSnail\Controllers\ControllerDecorator::class,
     
     
     // try to match one of the children
