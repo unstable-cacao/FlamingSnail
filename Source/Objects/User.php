@@ -7,12 +7,12 @@ use Objection\LiteSetup;
 
 
 /**
- * @property int    $ID
- * @property string $Created
- * @property string $Modified
- * @property string $Username
- * @property string $Email
- * @property string $Password
+ * @property int|null   $ID
+ * @property string		$Created
+ * @property string		$Modified
+ * @property string		$Username
+ * @property string		$Email
+ * @property string		$Password
  */
 class User extends LiteObject
 {
@@ -23,11 +23,11 @@ class User extends LiteObject
     {
         return [
             'ID'        => LiteSetup::createInt(null),
-            'Created'   => LiteSetup::createString(null),
-            'Modified'  => LiteSetup::createString(null),
-            'Username'  => LiteSetup::createString(null),
-            'Email'     => LiteSetup::createString(null),
-            'Password'  => LiteSetup::createString(null)
+            'Created'   => LiteSetup::createString(),
+            'Modified'  => LiteSetup::createString(),
+            'Username'  => LiteSetup::createString(),
+            'Email'     => LiteSetup::createString(),
+            'Password'  => LiteSetup::createString()
         ];
     }
 }
