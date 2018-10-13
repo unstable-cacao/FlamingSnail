@@ -1,5 +1,5 @@
 <?php
-namespace FlamingSnail\Controllers;
+namespace FlamingSnail\Web\Controllers;
 
 
 class NotFoundController

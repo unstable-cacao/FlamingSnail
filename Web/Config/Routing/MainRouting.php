@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'controller'    => \FlamingSnail\Controllers\NotFoundController::class,
+    'controller'    => \FlamingSnail\Web\Controllers\NotFoundController::class,
     'action'        => 'notFound',
-    'decorator'     => \FlamingSnail\Controllers\ControllerDecorator::class,
+    'decorator'     => \FlamingSnail\Web\Decorators\ControllerDecorator::class,
     
     
     // try to match one of the children
@@ -19,7 +19,7 @@ return [
                 [
                     "route"         => "login",
                     "method"        => "POST",
-                    "controller"    => \FlamingSnail\Controllers\AuthenticationController::class,
+                    "controller"    => \FlamingSnail\Web\Controllers\AuthenticationController::class,
                     "action"        => 'login'
                 ],
                 
@@ -27,7 +27,7 @@ return [
                 [
                     "route"         => "register",
                     "method"        => "POST",
-                    "controller"    => \FlamingSnail\Controllers\AuthenticationController::class,
+                    "controller"    => \FlamingSnail\Web\Controllers\AuthenticationController::class,
                     "action"        => 'register'
                 ]
             ]

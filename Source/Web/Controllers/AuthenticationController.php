@@ -1,5 +1,5 @@
 <?php
-namespace FlamingSnail\Controllers;
+namespace FlamingSnail\Web\Controllers;
 
 
 use FlamingSnail\DAO\UserDAO;
