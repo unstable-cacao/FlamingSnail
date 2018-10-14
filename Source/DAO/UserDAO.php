@@ -2,12 +2,13 @@
 namespace FlamingSnail\DAO;
 
 
+use FlamingSnail\Base\DAO\IUserDAO;
 use FlamingSnail\MySQLConnector;
 use FlamingSnail\Objects\User;
 use Squid\MySql\Impl\Connectors\Object\Generic\GenericIdConnector;
 
 
-class UserDAO
+class UserDAO implements IUserDAO
 {
     /** @var GenericIdConnector */
     private $connector;

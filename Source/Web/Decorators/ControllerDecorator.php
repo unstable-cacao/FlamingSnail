@@ -2,10 +2,18 @@
 namespace FlamingSnail\Web\Decorators;
 
 
+use WebCore\IWebRequest;
+
+
 class ControllerDecorator
 {
-    public function before()
+    public function before(IWebRequest $request)
     {
-        echo 1; die;
+        $sid = $request->getCookie('sid');
+        
+        if (!$sid)
+            return;
+        
+        
     }
 }
