@@ -5,6 +5,9 @@ namespace FlamingSnail\Base\DAO;
 use FlamingSnail\Objects\User;
 
 
+/**
+ * @skeleton
+ */
 interface IUserDAO
 {
     public function load(int $ID): ?User;

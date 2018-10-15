@@ -2,9 +2,12 @@
 namespace FlamingSnail\Base\DAO;
 
 
-use Objects\Session;
+use FlamingSnail\Objects\Session;
 
 
+/** 
+ * @skeleton 
+ */
 interface ISessionDAO
 {
     public function load(string $ID): ?Session;

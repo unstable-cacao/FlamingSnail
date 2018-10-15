@@ -1,5 +1,5 @@
 <?php
-namespace Objects;
+namespace FlamingSnail\Objects;
 
 
 use Objection\LiteObject;

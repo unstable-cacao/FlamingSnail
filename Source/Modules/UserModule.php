@@ -2,7 +2,7 @@
 namespace FlamingSnail\Modules;
 
 
-use Base\Modules\IUserModule;
+use FlamingSnail\Base\Modules\IUserModule;
 use FlamingSnail\Objects\Params\LoginParams;
 use FlamingSnail\Objects\User;
 

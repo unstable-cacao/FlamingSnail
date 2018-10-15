@@ -4,7 +4,7 @@ namespace FlamingSnail\DAO;
 
 use FlamingSnail\Base\DAO\ISessionDAO;
 use FlamingSnail\MySQLConnector;
-use Objects\Session;
+use FlamingSnail\Objects\Session;
 use Squid\MySql\Impl\Connectors\Object\Generic\GenericIdConnector;
 
 

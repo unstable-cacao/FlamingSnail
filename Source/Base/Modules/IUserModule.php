@@ -1,11 +1,14 @@
 <?php
-namespace Base\Modules;
+namespace FlamingSnail\Base\Modules;
 
 
 use FlamingSnail\Objects\Params\LoginParams;
 use FlamingSnail\Objects\User;
 
 
+/**
+ * @skeleton
+ */
 interface IUserModule
 {
     public function getUserByLoginParams(LoginParams $params): User;

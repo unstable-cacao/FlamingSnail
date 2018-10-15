@@ -2,10 +2,10 @@
 namespace Modules;
 
 
-use Base\Modules\ISessionModule;
+use FlamingSnail\Base\Modules\ISessionModule;
 use FlamingSnail\Objects\User;
-use Modules\ID\SessionIdGenerator;
-use Objects\Session;
+use FlamingSnail\Modules\ID\SessionIdGenerator;
+use FlamingSnail\Objects\Session;
 
 
 /**

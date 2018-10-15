@@ -2,8 +2,8 @@
 namespace FlamingSnail\Web\Controllers;
 
 
-use Base\Modules\ISessionModule;
-use Base\Modules\IUserModule;
+use FlamingSnail\Base\Modules\ISessionModule;
+use FlamingSnail\Base\Modules\IUserModule;
 use FlamingSnail\Base\Web\Validators\ILoginParamsValidator;
 use FlamingSnail\DAO\UserDAO;
 use FlamingSnail\Objects\User;
@@ -25,7 +25,7 @@ class AuthenticationController
     )
     {
         $params = $validator->validate($request->getPost());
-        $user = $userModule->getUser($params);
+        $user = $userModule->getUserByLoginParams($params);
         $sessionModule->saveSession($user);
         
         return 'Hello ' . $user->Username;

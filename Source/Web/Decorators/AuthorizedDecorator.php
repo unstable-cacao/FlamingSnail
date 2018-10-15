@@ -2,8 +2,8 @@
 namespace FlamingSnail\Web\Decorators;
 
 
-use Base\Modules\ISessionModule;
-use Base\Modules\IUserModule;
+use FlamingSnail\Base\Modules\ISessionModule;
+use FlamingSnail\Base\Modules\IUserModule;
 use FlamingSnail\Objects\User;
 use Narrator\INarrator;
 use WebCore\IWebRequest;

@@ -11,31 +11,41 @@ return [
         // Authorized
         [
             'decorator' => \FlamingSnail\Web\Decorators\AuthorizedDecorator::class,
-            
-            // All ajax requests
-            [
-                'ajax' => true,
-        
-                'require' =>
+
+            'require' =>
+                [
+                    // Index action
                     [
-                        // Login action
-                        [
-                            "route"         => "login",
-                            "method"        => "POST",
-                            "controller"    => \FlamingSnail\Web\Controllers\AuthenticationController::class,
-                            "action"        => 'login',
-                            'decorator'     => \Web\Decorators\LoginDecorator::class
-                        ],
+                        "controller"    => \FlamingSnail\Web\Controllers\IndexController::class,
+                        "action"        => 'index'
+                    ],
+                ]
+        ],
+    
+        
+        // All ajax requests
+        [
+            'ajax' => true,
+        
+            'require' =>
+                [
+                    // Login action
+                    [
+                        "route"         => "login",
+                        "method"        => "POST",
+                        "controller"    => \FlamingSnail\Web\Controllers\AuthenticationController::class,
+                        "action"        => 'login',
+                        'decorator'     => \FlamingSnail\Web\Decorators\LoginDecorator::class
+                    ],
                 
-                        // Register action
-                        [
-                            "route"         => "register",
-                            "method"        => "POST",
-                            "controller"    => \FlamingSnail\Web\Controllers\AuthenticationController::class,
-                            "action"        => 'register'
-                        ]
+                    // Register action
+                    [
+                        "route"         => "register",
+                        "method"        => "POST",
+                        "controller"    => \FlamingSnail\Web\Controllers\AuthenticationController::class,
+                        "action"        => 'register'
                     ]
-            ],
+                ]
         ],
         
         

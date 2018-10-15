@@ -1,5 +1,5 @@
 <?php
-namespace Modules\ID;
+namespace FlamingSnail\Modules\ID;
 
 
 use Traitor\TStaticClass;

@@ -1,5 +1,5 @@
 <?php
-namespace Web\Decorators;
+namespace FlamingSnail\Web\Decorators;
 
 
 class LoginDecorator
