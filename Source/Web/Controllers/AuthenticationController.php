@@ -35,14 +35,10 @@ class AuthenticationController
     {
         $username = $request->getParam('username');
         $password = $request->getParam('password');
-        $passwordVerify = $request->getParam('passwordVerify');
         $email = $request->getParam('email');
         
-        if (!$username || !$password || !$passwordVerify || !$email)
+        if (!$username || !$password || !$email)
             throw new \Exception("All fields are required");
-        
-        if ($password != $passwordVerify)
-            throw new \Exception("Password verification not matched");
         
         $user = new User();
         $user->Username = $username;

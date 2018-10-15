@@ -36,7 +36,7 @@ abstract class Element extends LiteObject
 	{
 		parent::__construct();
 		
-		$this->Type = $this;
+		$this->Type = $type;
 		$this->Category = $category;
 	}
 }

@@ -15,5 +15,5 @@ class ElementType
 	public const IMAGE		= 'image';
 	public const DOTS		= 'dots';
 	public const NUMBER		= 'number';
-	public const COSTUME	= 'costume';
+	public const CUSTOM	    = 'custom';
 }
