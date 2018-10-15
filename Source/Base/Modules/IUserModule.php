@@ -8,5 +8,6 @@ use FlamingSnail\Objects\User;
 
 interface IUserModule
 {
-    public function getUser(LoginParams $params): User;
+    public function getUserByLoginParams(LoginParams $params): User;
+    public function getUserByID(int $ID): User;
 }

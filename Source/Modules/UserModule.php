@@ -19,7 +19,7 @@ class UserModule implements IUserModule
     private $userDao;
     
     
-    public function getUser(LoginParams $params): User
+    public function getUserByLoginParams(LoginParams $params): User
     {
         if ($params->isEmail())
         {
@@ -31,10 +31,20 @@ class UserModule implements IUserModule
         }
         
         if (!$user)
-            throw new \Exception("User was not found");
+            throw new \Exception("User was not found", 404);
     
         if (!password_verify($params->password, $user->Password))
             throw new \Exception("Invalid credentials");
+        
+        return $user;
+    }
+    
+    public function getUserByID(int $ID): User
+    {
+        $user = $this->userDao->load($ID);
+        
+        if (!$user)
+            throw new \Exception("User with ID $ID was not found", 404);
         
         return $user;
     }

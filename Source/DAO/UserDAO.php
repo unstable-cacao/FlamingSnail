@@ -25,6 +25,11 @@ class UserDAO implements IUserDAO
     }
     
     
+    public function load(int $ID): ?User
+    {
+        return $this->connector->loadById($ID);
+    }
+    
     public function loadByEmail(string $email): ?User
     {
         return $this->connector->selectObjectByField('Email', $email);
