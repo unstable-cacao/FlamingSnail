@@ -20,7 +20,8 @@ return [
                     "route"         => "login",
                     "method"        => "POST",
                     "controller"    => \FlamingSnail\Web\Controllers\AuthenticationController::class,
-                    "action"        => 'login'
+                    "action"        => 'login',
+                    'decorator'     => \Web\Decorators\LoginDecorator::class
                 ],
                 
                 // Register action
