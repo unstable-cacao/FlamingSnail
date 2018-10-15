@@ -2,6 +2,9 @@
 namespace FlamingSnail\Web\Controllers;
 
 
+use Base\Modules\ISessionModule;
+use Base\Modules\IUserModule;
+use FlamingSnail\Base\Web\Validators\ILoginParamsValidator;
 use FlamingSnail\DAO\UserDAO;
 use FlamingSnail\Objects\User;
 use WebCore\IWebRequest;
@@ -14,28 +17,18 @@ class AuthenticationController
         throw $exception;
     }
     
-    public function login(IWebRequest $request)
+    public function login(
+        IWebRequest $request, 
+        ILoginParamsValidator $validator, 
+        IUserModule $userModule, 
+        ISessionModule $sessionModule
+    )
     {
-        $username = $request->getParam('username');
-        $password = $request->getParam('password');
-        $dao = new UserDAO();
+        $params = $validator->validate($request->getPost());
+        $user = $userModule->getUser($params);
+        $sessionModule->saveSession($user);
         
-        if (strpos($username, '@') !== false)
-        {
-            $user = $dao->loadByEmail($username);
-        }
-        else
-        {
-            $user = $dao->loadByUsername($username);
-        }
-        
-        if (!$user)
-            throw new \Exception("User not found");
-        
-        if (!password_verify($password, $user->Password))
-            throw new \Exception("Invalid credentials");
-        
-        return 'Hello world!';
+        return 'Hello ' . $user->Username;
     }
     
     public function register(IWebRequest $request)

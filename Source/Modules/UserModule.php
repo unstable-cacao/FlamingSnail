@@ -2,6 +2,7 @@
 namespace FlamingSnail\Modules;
 
 
+use Base\Modules\IUserModule;
 use FlamingSnail\Objects\Params\LoginParams;
 use FlamingSnail\Objects\User;
 
@@ -9,7 +10,7 @@ use FlamingSnail\Objects\User;
 /**
  * @autoload
  */
-class UserModule
+class UserModule implements IUserModule
 {
     /** 
      * @autoload
