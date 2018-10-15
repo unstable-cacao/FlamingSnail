@@ -2,12 +2,13 @@
 namespace FlamingSnail;
 
 
-use Skeleton\ConfigLoader\DirectoryConfigLoader;
 use Skeleton\Skeleton;
+use Skeleton\Base\ISkeletonInit;
+use Skeleton\ConfigLoader\DirectoryConfigLoader;
 use Traitor\TStaticClass;
 
 
-class SkeletonInit
+class SkeletonInit implements ISkeletonInit
 {
 	use TStaticClass;
 	
