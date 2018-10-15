@@ -18,11 +18,6 @@ class UserModule
     private $userDao;
     
     
-    public function getUserSession(string $sessionID)
-    {
-        
-    }
-    
     public function getUser(LoginParams $params): User
     {
         if ($params->isEmail())

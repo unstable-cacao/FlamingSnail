@@ -21,17 +21,17 @@ class SessionDAO implements ISessionDAO
             ->setConnector(MySQLConnector::conn())
             ->setObjectMap(Session::class, ['Created', 'Modified'])
             ->setTable('Session')
-            ->setGeneratedId('ID');
+            ->setIdKey('ID');
     }
     
     
     public function load(string $ID): ?Session
     {
-        // TODO: Implement load() method.
+        return $this->connector->loadById($ID);
     }
     
     public function save(Session $session): bool
     {
-        // TODO: Implement save() method.
+        return $this->save($session);
     }
 }

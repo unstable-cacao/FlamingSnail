@@ -13,7 +13,5 @@ class ControllerDecorator
         
         if (!$sid)
             return;
-        
-        
     }
 }
