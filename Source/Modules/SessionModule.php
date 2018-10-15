@@ -1,5 +1,5 @@
 <?php
-namespace Modules;
+namespace FlamingSnail\Modules;
 
 
 use FlamingSnail\Base\Modules\ISessionModule;
