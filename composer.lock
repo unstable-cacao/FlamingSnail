@@ -699,16 +699,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "6.0.8",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "848f78b3309780fef7ec8c4666b7ab4e6b09b22f"
+                "reference": "0685fb6a43aed1b2e09804d1aaf17144c82861f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/848f78b3309780fef7ec8c4666b7ab4e6b09b22f",
-                "reference": "848f78b3309780fef7ec8c4666b7ab4e6b09b22f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/0685fb6a43aed1b2e09804d1aaf17144c82861f8",
+                "reference": "0685fb6a43aed1b2e09804d1aaf17144c82861f8",
                 "shasum": ""
             },
             "require": {
@@ -732,7 +732,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.0-dev"
+                    "dev-master": "6.1-dev"
                 }
             },
             "autoload": {
@@ -758,7 +758,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-10-04T03:41:23+00:00"
+            "time": "2018-10-16T05:37:37+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1816,12 +1816,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:unstable-cacao/WebServer.git",
-                "reference": "5908b0c59c9628698ebfdad2cd00910a147fa1dc"
+                "reference": "21abc7692349810faf2254a20250cd166f208b38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unstable-cacao/WebServer/zipball/5908b0c59c9628698ebfdad2cd00910a147fa1dc",
-                "reference": "5908b0c59c9628698ebfdad2cd00910a147fa1dc",
+                "url": "https://api.github.com/repos/unstable-cacao/WebServer/zipball/21abc7692349810faf2254a20250cd166f208b38",
+                "reference": "21abc7692349810faf2254a20250cd166f208b38",
                 "shasum": ""
             },
             "require": {
@@ -1847,7 +1847,7 @@
                     "./vendor/phpunit/phpunit/phpunit --dont-report-useless-tests"
                 ]
             },
-            "time": "2018-10-11T12:24:27+00:00"
+            "time": "2018-10-16T12:29:58+00:00"
         },
         {
             "name": "webmozart/assert",

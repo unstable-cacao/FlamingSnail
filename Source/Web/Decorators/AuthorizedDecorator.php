@@ -28,7 +28,7 @@ class AuthorizedDecorator
         if ($session->isTimedOut())
             throw new \Exception("User session timed out", 403);
         
-        $user = $userModule->getUserByID($session->ID);
+        $user = $userModule->getUserByID($session->UserID);
         
         $narrator->params()->byType(User::class, $user);
     }
