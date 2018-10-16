@@ -16,18 +16,18 @@ use Objection\LiteSetup;
  */
 class User extends LiteObject
 {
-    /**
-     * @return array
-     */
-    protected function _setup()
-    {
-        return [
-            'ID'        => LiteSetup::createInt(null),
-            'Created'   => LiteSetup::createString(),
-            'Modified'  => LiteSetup::createString(),
-            'Username'  => LiteSetup::createString(),
-            'Email'     => LiteSetup::createString(),
-            'Password'  => LiteSetup::createString()
-        ];
-    }
+	/**
+	 * @return array
+	 */
+	protected function _setup()
+	{
+		return [
+			'ID'        => LiteSetup::createInt(null),
+			'Created'   => LiteSetup::createString(),
+			'Modified'  => LiteSetup::createString(),
+			'Username'  => LiteSetup::createString(),
+			'Email'     => LiteSetup::createString(),
+			'Password'  => LiteSetup::createString()
+		];
+	}
 }

@@ -15,23 +15,23 @@ use Objection\LiteSetup;
  */
 class Session extends LiteObject
 {
-    /**
-     * @return array
-     */
-    protected function _setup()
-    {
-        return [
-            'ID'        => LiteSetup::createString(),
-            'Created'   => LiteSetup::createString(),
-            'Modified'  => LiteSetup::createString(),
-            'UserID'    => LiteSetup::createInt(),
-            'TTL'       => LiteSetup::createString()
-        ];
-    }
-    
-    
-    public function isTimedOut(): bool 
-    {
-        return strtotime($this->TTL) < time();
-    }
+	/**
+	 * @return array
+	 */
+	protected function _setup()
+	{
+		return [
+			'ID'        => LiteSetup::createString(),
+			'Created'   => LiteSetup::createString(),
+			'Modified'  => LiteSetup::createString(),
+			'UserID'    => LiteSetup::createInt(),
+			'TTL'       => LiteSetup::createString()
+		];
+	}
+	
+	
+	public function isTimedOut(): bool 
+	{
+		return strtotime($this->TTL) < time();
+	}
 }

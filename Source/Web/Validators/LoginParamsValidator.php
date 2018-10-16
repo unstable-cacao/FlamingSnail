@@ -15,7 +15,7 @@ class LoginParamsValidator implements ILoginParamsValidator
 		$password = $input->require('password');
 		
 		if (!$username || !$password)
-		    throw new \Exception("Username and password are required");
+			throw new \Exception("Username and password are required");
 		
 		$params = new LoginParams();
 		$params->identifier = $username;

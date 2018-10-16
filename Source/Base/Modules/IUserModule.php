@@ -11,7 +11,7 @@ use FlamingSnail\Objects\User;
  */
 interface IUserModule
 {
-    public function getUserByLoginParams(LoginParams $params): User;
-    public function getUserByID(int $ID): User;
-    public function saveUser(User $user): bool;
+	public function getUserByLoginParams(LoginParams $params): User;
+	public function getUserByID(int $ID): User;
+	public function saveUser(User $user): bool;
 }
