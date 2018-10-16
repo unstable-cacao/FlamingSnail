@@ -48,4 +48,9 @@ class UserModule implements IUserModule
         
         return $user;
     }
+    
+    public function saveUser(User $user): bool
+    {
+        return $this->userDao->save($user);
+    }
 }

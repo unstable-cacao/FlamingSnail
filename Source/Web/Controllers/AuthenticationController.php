@@ -5,8 +5,7 @@ namespace FlamingSnail\Web\Controllers;
 use FlamingSnail\Base\Modules\ISessionModule;
 use FlamingSnail\Base\Modules\IUserModule;
 use FlamingSnail\Base\Web\Validators\ILoginParamsValidator;
-use FlamingSnail\DAO\UserDAO;
-use FlamingSnail\Objects\User;
+use FlamingSnail\Base\Web\Validators\IRegisterParamsValidator;
 use WebCore\HTTP\Responses\StandardWebResponse;
 use WebCore\IWebRequest;
 
@@ -36,23 +35,15 @@ class AuthenticationController
         return $response;
     }
     
-    public function register(IWebRequest $request)
+    public function register(
+        IWebRequest $request,
+        IRegisterParamsValidator $validator,
+        IUserModule $userModule
+    )
     {
-        $username = $request->getParam('username');
-        $password = $request->getParam('password');
-        $email = $request->getParam('email');
+        $user = $validator->validate($request->getPost());
+        $userModule->saveUser($user);
         
-        if (!$username || !$password || !$email)
-            throw new \Exception("All fields are required");
-        
-        $user = new User();
-        $user->Username = $username;
-        $user->Email = $email;
-        $user->Password = password_hash($password, PASSWORD_BCRYPT);
-        
-        $dao = new UserDAO();
-        $dao->save($user);
-        
-        return 'User saved';
+        return 'User saved, please login';
     }
 }
