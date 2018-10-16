@@ -7,6 +7,7 @@ use FlamingSnail\Base\Modules\IUserModule;
 use FlamingSnail\Base\Web\Validators\ILoginParamsValidator;
 use FlamingSnail\DAO\UserDAO;
 use FlamingSnail\Objects\User;
+use WebCore\HTTP\Responses\StandardWebResponse;
 use WebCore\IWebRequest;
 
 
@@ -26,9 +27,13 @@ class AuthenticationController
     {
         $params = $validator->validate($request->getPost());
         $user = $userModule->getUserByLoginParams($params);
-        $sessionModule->saveSession($user);
+        $session = $sessionModule->createSession($user);
         
-        return 'Hello ' . $user->Username;
+        $response = new StandardWebResponse();
+        $response->setCookieByName('sid', $session->ID);
+        $response->setBody('Hello ' . $user->Username);
+        
+        return $response;
     }
     
     public function register(IWebRequest $request)

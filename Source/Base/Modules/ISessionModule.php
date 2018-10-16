@@ -11,6 +11,6 @@ use FlamingSnail\Objects\Session;
  */
 interface ISessionModule
 {
-    public function saveSession(User $user): bool;
+    public function createSession(User $user): Session;
     public function getSessionByID(string $sid): Session;
 }

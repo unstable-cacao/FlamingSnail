@@ -32,6 +32,6 @@ class SessionDAO implements ISessionDAO
     
     public function save(Session $session): bool
     {
-        return $this->save($session);
+        return $this->connector->save($session);
     }
 }

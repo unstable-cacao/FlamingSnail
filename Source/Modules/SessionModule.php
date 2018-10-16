@@ -20,14 +20,16 @@ class SessionModule implements ISessionModule
     private $sessionDao;
     
     
-    public function saveSession(User $user): bool 
+    public function createSession(User $user): Session 
     {
         $session = new Session();
         $session->ID = SessionIdGenerator::generate();
         $session->UserID = $user->ID;
         $session->TTL = date('Y-m-d H:i:s', time() + 60 * 60 * 3);
+    
+        $this->sessionDao->save($session);
         
-        return $this->sessionDao->save($session);
+        return $session;
     }
     
     public function getSessionByID(string $sid): Session
