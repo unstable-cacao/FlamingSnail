@@ -1,0 +1,19 @@
+{
+  "name": "flaming-snail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": 
+  {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marina Puchkov",
+  "license": "GNU",
+  "dependencies": 
+  {
+    "oktopost-duct": "^1.1.5",
+    "oktopost-namespace": "^2.0.2",
+    "oktopost-oyster": "^1.2.5",
+    "oktopost-plankton": "^2.1.1"
+  }
+}

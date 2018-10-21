@@ -9,3 +9,6 @@
 
 # Composer
 /vendor/
+
+# npm
+/Web/Source/node_modules
