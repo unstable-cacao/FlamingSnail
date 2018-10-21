@@ -19,7 +19,8 @@
         "unstable-cacao/traitor": "^1.0",
         "unstable-cacao/structura": "^1.0",
         "unstable-cacao/narrator": "^1.1",
-        "unstable-cacao/web-server": "dev-master"
+        "unstable-cacao/web-server": "dev-master",
+        "oktopost/snuggle": "^0.14.0"
     },
     "require-dev": 
     {

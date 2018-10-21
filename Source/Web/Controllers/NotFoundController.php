@@ -6,6 +6,6 @@ class NotFoundController
 {
 	public function notFound()
 	{
-		return "Route not found";
+		return file_get_contents(__DIR__ . '/../Views/index.html');
 	}
 }
