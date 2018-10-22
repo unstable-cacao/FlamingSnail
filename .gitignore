@@ -12,3 +12,6 @@
 
 # npm
 /Web/Source/node_modules
+
+# coverall
+/build

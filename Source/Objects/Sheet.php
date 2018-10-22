@@ -5,6 +5,7 @@ namespace FlamingSnail\Objects;
 use FlamingSnail\Objects\Sheet\Element;
 use Objection\LiteObject;
 use Objection\LiteSetup;
+use Objection\Mapper;
 
 
 /**
@@ -33,4 +34,22 @@ class Sheet extends LiteObject
 			'Elements'		=> LiteSetup::createInstanceArray(Element::class)
 		];
 	}
+	
+	
+	public function getArray(): array 
+    {
+        $result = Mapper::getArrayFor($this);
+    
+        $result['_id'] = $result['ID'];
+        unset($result['ID']);
+    
+        if ($result['RevisionID']) 
+        {
+            $result['_rev'] = $result['RevisionID'];
+        }
+        
+        unset($result['RevisionID']);
+        
+        return $result;
+    }
 }

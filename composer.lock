@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "849a67025458700df67793a20fd2a1d1",
+    "content-hash": "d64a3b5c19974130b29fc039f95ae2a7",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -196,6 +196,52 @@
             ],
             "description": "Annotations library (yes, another one)",
             "time": "2017-07-23T11:14:02+00:00"
+        },
+        {
+            "name": "oktopost/cartograph",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Oktopost/Cartograph.git",
+                "reference": "2e27ed2bafd4a64e4ec8b9afd714e3efea7f4df8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Oktopost/Cartograph/zipball/2e27ed2bafd4a64e4ec8b9afd714e3efea7f4df8",
+                "reference": "2e27ed2bafd4a64e4ec8b9afd714e3efea7f4df8",
+                "shasum": ""
+            },
+            "require": {
+                "oktopost/annotation": "^1.0",
+                "php": ">=7.1",
+                "unstable-cacao/itarator": "^1.0",
+                "unstable-cacao/structura": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cartograph\\": "src/Cartograph"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Puchkov",
+                    "email": "alexey@oktopost.com"
+                },
+                {
+                    "name": "Maksym Laktionov",
+                    "email": "maksym@oktopost.com"
+                }
+            ],
+            "time": "2018-07-06T13:22:44+00:00"
         },
         {
             "name": "oktopost/cosmic-ray",
@@ -1733,6 +1779,41 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2017-04-07T12:08:54+00:00"
+        },
+        {
+            "name": "unstable-cacao/itarator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unstable-cacao/Itarator.git",
+                "reference": "3b9307443136d09025d52435fc8295bfdff92978"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unstable-cacao/Itarator/zipball/3b9307443136d09025d52435fc8295bfdff92978",
+                "reference": "3b9307443136d09025d52435fc8295bfdff92978",
+                "shasum": ""
+            },
+            "require": {
+                "oktopost/objection": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Itarator": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Puchkov",
+                    "email": "alexey@oktopost.com"
+                }
+            ],
+            "time": "2017-08-02T08:53:12+00:00"
         },
         {
             "name": "unstable-cacao/narrator",

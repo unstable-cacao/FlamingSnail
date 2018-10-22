@@ -3,15 +3,15 @@ namespace FlamingSnail\DAO;
 
 
 use FlamingSnail\Base\DAO\ISheetDAO;
+use FlamingSnail\Cartograph;
 use FlamingSnail\CouchDBConnector;
 use FlamingSnail\Objects\Sheet;
-use Objection\Mapper;
 use Snuggle\Base\IConnector;
 
 
 class SheetDAO implements ISheetDAO
 {
-    public const DB_NAME = 'Sheet';
+    private static $DBName = 'sheet';
     
     
     /** @var IConnector */
@@ -26,30 +26,26 @@ class SheetDAO implements ISheetDAO
     
     public function load(string $ID): ?Sheet
     {
-        $data = $this->connector->get()->doc(self::DB_NAME, $ID)->queryJson();
+        $data = $this->connector->get()
+            ->ignoreMissing()
+            ->queryDoc(self::$DBName, $ID);
         
         if (!$data)
             return null;
-    
-        $data['ID'] = $data['_id'];
-        unset($data['_id']);
         
-        /** @var Sheet $sheet */
-        $sheet = Mapper::getObjectFrom(Sheet::class, $data);
+        $sheet = Cartograph::cartograph()->map()->from($data->toData())->into(Sheet::class); 
         
         return $sheet;
     }
     
     public function save(Sheet $sheet): bool
     {
-        $data = $sheet->toArray();
-        $data['_id'] = $data['ID'];
-        unset($data['ID']);
+        $data = $sheet->getArray();
         
         return $this->connector
             ->store()
             ->data($data)
-            ->into(self::DB_NAME)
+            ->into(self::$DBName)
             ->overrideConflict()
             ->execute()
             ->isSuccessful();
