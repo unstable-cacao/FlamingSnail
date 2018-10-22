@@ -6,18 +6,18 @@ error_reporting(E_ERROR | E_PARSE);
 
 function resetStaticDataMember(string $className, string $memberName)
 {
-    $reflectionClass = new ReflectionClass($className);
-    $property = $reflectionClass->getProperty($memberName);
-    $property->setAccessible(true);
-    $property->setValue($reflectionClass, null);
+	$reflectionClass = new ReflectionClass($className);
+	$property = $reflectionClass->getProperty($memberName);
+	$property->setAccessible(true);
+	$property->setValue($reflectionClass, null);
 }
 
 function setStaticDataMember(string $className, string $memberName, $value)
 {
-    $reflectionClass = new ReflectionClass($className);
-    $property = $reflectionClass->getProperty($memberName);
-    $property->setAccessible(true);
-    $property->setValue($reflectionClass, $value);
-    
-    return $reflectionClass->newInstance();
+	$reflectionClass = new ReflectionClass($className);
+	$property = $reflectionClass->getProperty($memberName);
+	$property->setAccessible(true);
+	$property->setValue($reflectionClass, $value);
+	
+	return $reflectionClass->newInstance();
 }
