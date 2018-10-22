@@ -37,19 +37,19 @@ class Sheet extends LiteObject
 	
 	
 	public function getArray(): array 
-    {
-        $result = Mapper::getArrayFor($this);
-    
-        $result['_id'] = $result['ID'];
-        unset($result['ID']);
-    
-        if ($result['RevisionID']) 
-        {
-            $result['_rev'] = $result['RevisionID'];
-        }
-        
-        unset($result['RevisionID']);
-        
-        return $result;
-    }
+	{
+		$result = Mapper::getArrayFor($this);
+	
+		$result['_id'] = $result['ID'];
+		unset($result['ID']);
+	
+		if ($result['RevisionID']) 
+		{
+			$result['_rev'] = $result['RevisionID'];
+		}
+		
+		unset($result['RevisionID']);
+		
+		return $result;
+	}
 }
