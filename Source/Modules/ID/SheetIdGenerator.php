@@ -12,6 +12,6 @@ class SheetIdGenerator
     
     public static function generate(): string
     {
-        return IdGenerator::generate(16);
+        return 'sht' . IdGenerator::generate(13);
     }
 }
