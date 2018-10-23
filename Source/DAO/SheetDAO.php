@@ -5,6 +5,7 @@ namespace FlamingSnail\DAO;
 use FlamingSnail\Base\DAO\ISheetDAO;
 use FlamingSnail\Cartograph;
 use FlamingSnail\CouchDBConnector;
+use FlamingSnail\Modules\ID\SheetIdGenerator;
 use FlamingSnail\Objects\Sheet;
 use Snuggle\Base\IConnector;
 
@@ -50,4 +51,19 @@ class SheetDAO implements ISheetDAO
 			->execute()
 			->isSuccessful();
 	}
+	
+	public function cloneSheet(string $ID): Sheet
+    {
+        $sheet = $this->load($ID);
+        
+        if (!$sheet)
+            throw new \Exception("Sheet with ID $ID was not found");
+        
+        $sheet->ID = SheetIdGenerator::generate();
+        $sheet->RevisionID = null;
+        
+        $this->save($sheet);
+        
+        return $sheet;
+    }
 }
