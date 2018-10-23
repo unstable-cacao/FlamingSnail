@@ -16,18 +16,18 @@ use Objection\LiteSetup;
  */
 class Page extends LiteObject
 {
-    /**
-     * @return array
-     */
-    protected function _setup()
-    {
-        return [
-            'ID'			=> LiteSetup::createString(null),
-            'RevisionID'	=> LiteSetup::createString(null),
-            'Created'		=> LiteSetup::createString(),
-            'Modified'		=> LiteSetup::createString(),
-            'SheetID'	    => LiteSetup::createString(),
-            'Fields'		=> LiteSetup::createArray()
-        ];
-    }
+	/**
+	 * @return array
+	 */
+	protected function _setup()
+	{
+		return [
+			'ID'			=> LiteSetup::createString(null),
+			'RevisionID'	=> LiteSetup::createString(null),
+			'Created'		=> LiteSetup::createString(),
+			'Modified'		=> LiteSetup::createString(),
+			'SheetID'	    => LiteSetup::createString(),
+			'Fields'		=> LiteSetup::createArray()
+		];
+	}
 }

@@ -7,11 +7,11 @@ use Traitor\TStaticClass;
 
 class SheetIdGenerator
 {
-    use TStaticClass;
-    
-    
-    public static function generate(): string
-    {
-        return 'sht' . IdGenerator::generate(13);
-    }
+	use TStaticClass;
+	
+	
+	public static function generate(): string
+	{
+		return 'sht' . IdGenerator::generate(13);
+	}
 }

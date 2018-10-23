@@ -17,18 +17,18 @@ use Objection\LiteSetup;
  */
 class Game extends LiteObject
 {
-    /**
-     * @return array
-     */
-    protected function _setup()
-    {
-        return [
-            'ID'        => LiteSetup::createInt(null),
-            'Name'      => LiteSetup::createString(),
-            'Creator'   => LiteSetup::createInt(),
-            'Created'   => LiteSetup::createString(),
-            'Modified'  => LiteSetup::createString(),
-            'Status'    => LiteSetup::createEnum(GameStatus::class)
-        ];
-    }
+	/**
+	 * @return array
+	 */
+	protected function _setup()
+	{
+		return [
+			'ID'        => LiteSetup::createInt(null),
+			'Name'      => LiteSetup::createString(),
+			'Creator'   => LiteSetup::createInt(),
+			'Created'   => LiteSetup::createString(),
+			'Modified'  => LiteSetup::createString(),
+			'Status'    => LiteSetup::createEnum(GameStatus::class)
+		];
+	}
 }

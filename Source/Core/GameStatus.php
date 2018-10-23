@@ -7,7 +7,9 @@ use Traitor\TEnum;
 
 class GameStatus
 {
-    use TEnum;
-    
-    
+	use TEnum;
+	
+	
+	public const ACTIVE     = 'active';
+	public const DELETED    = 'deleted';
 }
