@@ -6,6 +6,7 @@ use FlamingSnail\Base\DAO\ILogSaveDAO;
 use FlamingSnail\Base\DAO\Log\ILogBuilder;
 use FlamingSnail\Objects\Action;
 use FlamingSnail\Objects\Log;
+use FlamingSnail\Utils\Time;
 
 
 class LogBuilder implements ILogBuilder
@@ -66,7 +67,9 @@ class LogBuilder implements ILogBuilder
 	
 	public function save(): Log
 	{
+		$this->object->Created = Time::now();
 		$this->dao->save($this->object);
+		
 		return $this->object;
 	}
 }

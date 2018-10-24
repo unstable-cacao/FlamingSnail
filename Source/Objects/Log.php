@@ -9,10 +9,11 @@ use Objection\Mapper;
 
 /**
  * @property string			$ID
- * @property string			$GameID
  * @property string			$RevisionID
+ * @property string			$GameID
  * @property string|null	$StoryID
  * @property string			$UserID
+ * @property string			$Created
  * @property string			$Sequence
  * @property Action[]		$Actions
  */
@@ -25,10 +26,11 @@ class Log extends LiteObject
 	{
 		return [
 			'ID'			=> LiteSetup::createString(),
-			'GameID' 		=> LiteSetup::createString(null),
 			'RevisionID'	=> LiteSetup::createString(null),
+			'GameID' 		=> LiteSetup::createString(null),
 			'StoryID'		=> LiteSetup::createString(null),
 			'UserID'		=> LiteSetup::createString(),
+			'Created'		=> LiteSetup::createString(),
 			'Sequence'		=> LiteSetup::createString(),
 			'Actions'		=> LiteSetup::createInstanceArray(Action::class)
 		];
