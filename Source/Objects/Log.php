@@ -10,9 +10,9 @@ use Objection\Mapper;
 /**
  * @property string			$ID
  * @property string			$RevisionID
- * @property string			$GameID
+ * @property int			$GameID
  * @property string|null	$StoryID
- * @property string			$UserID
+ * @property int			$UserID
  * @property string			$Created
  * @property string			$Sequence
  * @property Action[]		$Actions
@@ -25,11 +25,11 @@ class Log extends LiteObject
 	protected function _setup()
 	{
 		return [
-			'ID'			=> LiteSetup::createString(),
+			'ID'			=> LiteSetup::createString(null),
 			'RevisionID'	=> LiteSetup::createString(null),
-			'GameID' 		=> LiteSetup::createString(null),
+			'GameID' 		=> LiteSetup::createInt(),
 			'StoryID'		=> LiteSetup::createString(null),
-			'UserID'		=> LiteSetup::createString(),
+			'UserID'		=> LiteSetup::createInt(),
 			'Created'		=> LiteSetup::createString(),
 			'Sequence'		=> LiteSetup::createString(),
 			'Actions'		=> LiteSetup::createInstanceArray(Action::class)

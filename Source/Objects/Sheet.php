@@ -3,6 +3,7 @@ namespace FlamingSnail\Objects;
 
 
 use FlamingSnail\Objects\Sheet\Element;
+use FlamingSnail\Utils\Time;
 use Objection\LiteObject;
 use Objection\LiteSetup;
 use Objection\Mapper;
@@ -33,6 +34,14 @@ class Sheet extends LiteObject
 			'Dimensions'	=> LiteSetup::createInstanceOf(Vector::class),
 			'Elements'		=> LiteSetup::createInstanceArray(Element::class)
 		];
+	}
+	
+	
+	public function __construct()
+	{
+		parent::__construct();
+		
+		$this->Created = Time::now();
 	}
 	
 	

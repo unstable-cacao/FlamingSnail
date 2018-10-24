@@ -7,6 +7,7 @@ use FlamingSnail\Cartograph;
 use FlamingSnail\CouchDBConnector;
 use FlamingSnail\Modules\ID\SheetIdGenerator;
 use FlamingSnail\Objects\Sheet;
+use FlamingSnail\Utils\Time;
 use Snuggle\Base\IConnector;
 
 
@@ -41,6 +42,8 @@ class SheetDAO implements ISheetDAO
 	
 	public function save(Sheet $sheet): bool
 	{
+		$sheet->Modified = Time::now();
+		
 		$data = $sheet->getArray();
 		
 		return $this->connector
