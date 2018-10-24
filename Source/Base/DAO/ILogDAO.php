@@ -9,5 +9,5 @@ use FlamingSnail\Objects\Log;
 interface ILogDAO extends ILogSaveDAO
 {
 	public function getBuilder(): ILogBuilder;
-	public function load(string $ID): ?Log;
+	public function load(string $id): ?Log;
 }

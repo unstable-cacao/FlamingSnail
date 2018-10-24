@@ -7,6 +7,6 @@ use FlamingSnail\Objects\Game;
 
 interface IGameDAO
 {
-	public function load(int $ID): ?Game;
+	public function load(int $id): ?Game;
 	public function save(Game $user): bool;
 }

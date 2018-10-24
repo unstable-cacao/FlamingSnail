@@ -10,6 +10,6 @@ use FlamingSnail\Objects\Session;
  */
 interface ISessionDAO
 {
-	public function load(string $ID): ?Session;
+	public function load(string $id): ?Session;
 	public function save(Session $session): bool;
 }

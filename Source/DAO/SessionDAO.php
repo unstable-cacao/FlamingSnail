@@ -25,9 +25,9 @@ class SessionDAO implements ISessionDAO
 	}
 	
 	
-	public function load(string $ID): ?Session
+	public function load(string $id): ?Session
 	{
-		return $this->connector->loadById($ID);
+		return $this->connector->loadById($id);
 	}
 	
 	public function save(Session $session): bool

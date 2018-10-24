@@ -25,9 +25,9 @@ class GameDAO implements IGameDAO
 	}
 	
 	
-	public function load(int $ID): ?Game
+	public function load(int $id): ?Game
 	{
-		return $this->connector->loadById($ID);
+		return $this->connector->loadById($id);
 	}
 	
 	public function save(Game $user): bool

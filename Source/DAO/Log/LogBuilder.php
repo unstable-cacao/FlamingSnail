@@ -24,21 +24,21 @@ class LogBuilder implements ILogBuilder
 	}
 	
 	
-	public function setGameID(string $ID): ILogBuilder
+	public function setGameID(string $id): ILogBuilder
 	{
-		$this->object->GameID = $ID;
+		$this->object->GameID = $id;
 		return $this;
 	}
 	
-	public function setStoryID(string $ID): ILogBuilder
+	public function setStoryID(string $id): ILogBuilder
 	{
-		$this->object->StoryID = $ID;
+		$this->object->StoryID = $id;
 		return $this;
 	}
 	
-	public function setUserID(string $ID): ILogBuilder
+	public function setUserID(string $id): ILogBuilder
 	{
-		$this->object->UserID = $ID;
+		$this->object->UserID = $id;
 		return $this;
 	}
 	
@@ -54,11 +54,11 @@ class LogBuilder implements ILogBuilder
 		return $this;
 	}
 	
-	public function createAction(string $type, array $IDs, $value = null): ILogBuilder
+	public function createAction(string $type, array $ids, $value = null): ILogBuilder
 	{
 		$action = new Action();
 		$action->Action = $type;
-		$action->IDs = $IDs;
+		$action->IDs = $ids;
 		$action->Value = $value;
 		
 		return $this->addAction($action);

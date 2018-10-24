@@ -25,11 +25,11 @@ class SheetDAO implements ISheetDAO
 	}
 	
 	
-	public function load(string $ID): ?Sheet
+	public function load(string $id): ?Sheet
 	{
 		$data = $this->connector->get()
 			->ignoreMissing()
-			->queryDoc(self::$DBName, $ID);
+			->queryDoc(self::$DBName, $id);
 		
 		if (!$data)
 			return null;
@@ -52,12 +52,12 @@ class SheetDAO implements ISheetDAO
 			->isSuccessful();
 	}
 	
-	public function cloneSheet(string $ID): Sheet
+	public function cloneSheet(string $id): Sheet
     {
-        $sheet = $this->load($ID);
+        $sheet = $this->load($id);
         
         if (!$sheet)
-            throw new \Exception("Sheet with ID $ID was not found");
+            throw new \Exception("Sheet with ID $id was not found");
         
         $sheet->ID = SheetIdGenerator::generate();
         $sheet->RevisionID = null;

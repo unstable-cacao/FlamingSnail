@@ -10,7 +10,7 @@ use FlamingSnail\Objects\User;
  */
 interface IUserDAO
 {
-	public function load(int $ID): ?User;
+	public function load(int $id): ?User;
 	public function loadByEmail(string $email): ?User;
 	public function loadByUsername(string $username): ?User;
 	public function save(User $user): bool;

@@ -31,11 +31,11 @@ class LogDAO implements ILogDAO
 		return new LogBuilder($this);
 	}
 	
-	public function load(string $ID): ?Log
+	public function load(string $id): ?Log
 	{
 		$data = $this->connector->get()
 			->ignoreMissing()
-			->queryDoc(self::$DBName, $ID);
+			->queryDoc(self::$DBName, $id);
 		
 		if (!$data)
 			return null;

@@ -39,12 +39,12 @@ class UserModule implements IUserModule
 		return $user;
 	}
 	
-	public function getUserByID(int $ID): User
+	public function getUserByID(int $id): User
 	{
-		$user = $this->userDao->load($ID);
+		$user = $this->userDao->load($id);
 		
 		if (!$user)
-			throw new \Exception("User with ID $ID was not found", 404);
+			throw new \Exception("User with ID $id was not found", 404);
 		
 		return $user;
 	}
