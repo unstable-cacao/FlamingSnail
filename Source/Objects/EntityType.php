@@ -8,13 +8,14 @@ use Objection\LiteSetup;
 
 
 /**
- * @property int	$ID
- * @property string	$Created
- * @property string	$Modified
- * @property int	$GameID
- * @property int	$CreatorID
- * @property string	$Name
- * @property string	$Status
+ * @property int		$ID
+ * @property string		$Created
+ * @property string		$Modified
+ * @property int		$GameID
+ * @property int		$CreatorID
+ * @property string		$Name
+ * @property string		$Status
+ * @property string[]	$SheetIDs
  */
 class EntityType extends LiteObject
 {
@@ -30,7 +31,8 @@ class EntityType extends LiteObject
 			'GameID'	=> LiteSetup::createInt(),
 			'CreatorID'	=> LiteSetup::createInt(),
 			'Name'		=> LiteSetup::createString(),
-			'Status'	=> LiteSetup::createEnum(EntityTypeStatus::class)
+			'Status'	=> LiteSetup::createEnum(EntityTypeStatus::class),
+			'SheetIDs'	=> LiteSetup::createArray()
 		];
 	}
 }
