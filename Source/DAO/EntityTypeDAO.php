@@ -10,6 +10,9 @@ use Squid\MySql\Impl\Connectors\Object\Generic\GenericIdConnector;
 
 class EntityTypeDAO implements IEntityTypeDAO
 {
+	private const CONNECTION_TABLE_NAME = 'EntityTypeSheets';
+	
+	
 	/** @var GenericIdConnector */
 	private $connector;
 	
@@ -40,7 +43,11 @@ class EntityTypeDAO implements IEntityTypeDAO
 	
 	public function save(EntityType $entityType): bool
 	{
-		return $this->connector->save($entityType);
+		$res = $this->connector->save($entityType);
+		$res = $this->deletePageIDsNotInList($entityType->ID, $entityType->SheetIDs) && $res;
+		$res = $this->savePageIDs($entityType->ID, $entityType->SheetIDs) && $res;
+		
+		return $res;
 	}
 	
 	public function loadSheetIDs(int $entityTypeID): array
@@ -48,8 +55,44 @@ class EntityTypeDAO implements IEntityTypeDAO
 		return $this->connector->getConnector()
 			->select()
 			->column('SheetID')
-			->from('EntityTypeSheets')
+			->from(self::CONNECTION_TABLE_NAME)
 			->byField('EntityTypeID', $entityTypeID)
 			->queryColumn();
+	}
+	
+	public function savePageIDs(int $entityTypeID, array $sheetIDs): bool
+	{
+		if (!$sheetIDs)
+			return true;
+		
+		$values = [];
+		
+		foreach ($sheetIDs as $sheetID)
+		{
+			$values[] = ['EntityTypeID' => $entityTypeID, 'SheetID' => $sheetID];
+		}
+		
+		$query = $this->connector->getConnector()
+			->insert()
+			->ignore()
+			->into(self::CONNECTION_TABLE_NAME)
+			->valuesBulk($values);
+		
+		return $query->executeDml();
+	}
+	
+	public function deletePageIDsNotInList(int $entityTypeID, array $sheetIDs): bool
+	{
+		$query = $this->connector->getConnector()
+			->delete()
+			->from(self::CONNECTION_TABLE_NAME)
+			->byField('EntityTypeID', $entityTypeID);
+		
+		if ($sheetIDs)
+		{
+			$query->whereNotIn('SheetID', $sheetIDs);
+		}
+		
+		return $query->executeDml();
 	}
 }
