@@ -12,6 +12,7 @@
 
 # npm
 /Web/Source/node_modules
+/Web/Public/resources/*
 
 # coverall
 /build

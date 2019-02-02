@@ -5,21 +5,57 @@ const concat	= require('gulp-concat');
 const NamespaceManager = require('oktopost-namespace');
 
 
+global.die = function()
+{
+	process.exit();
+};
+
+global.dd = function()
+{
+	console.log(...arguments);
+	die();
+};
+
+global.echo = function()
+{
+	console.log(...arguments);
+};
+
+
 const nm = NamespaceManager.setup(__dirname, function (root)
 {
-	var a = root.FlamingSnail.Boot;
+	var load = [
+		root.FlamingSnail.Globals,
+		root.FlamingSnail.Boot
+	];
 });
 
-const dependencies = [].concat(
-	'node_modules/oktopost-namespace/bin/namespace.web.js',
-	nm.dependencies('FlamingSnail.Boot')
-);
+
+const dependencies = (() => 
+{
+	var Globals = nm.dependencies('FlamingSnail.Globals');
+	var Boot = nm.dependencies('FlamingSnail.Boot', true);
+	
+	Boot.filter((path) => Globals.indexOf(path) !== false);
+	
+	return [].concat(
+		'node_modules/oktopost-namespace/bin/namespace.web.js',
+		Globals,
+		Boot
+	);
+})();
 
 
-gulp.task('build', () => 
+gulp.task('build-libs', () => 
+{
+	gulp.src('js/Libraries/*.js')
+		.pipe(gulp.dest('../Public/resources'));
+});
+
+
+gulp.task('build', ['build-libs'], () => 
 {
 	gulp.src(dependencies)
 		.pipe(concat('main.js'))
-		.pipe(uglify())
 		.pipe(gulp.dest('../Public/resources'));
 });
