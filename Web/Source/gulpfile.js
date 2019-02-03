@@ -1,6 +1,9 @@
-const gulp		= require('gulp');
-const uglify	= require('gulp-uglify');
-const concat	= require('gulp-concat');
+const gulp			= require('gulp');
+const uglify		= require('gulp-uglify');
+const concat		= require('gulp-concat');
+const wrap			= require('gulp-wrap');
+const declare		= require('gulp-declare');
+const handlebars	= require('gulp-handlebars');
 
 const NamespaceManager = require('oktopost-namespace');
 
@@ -46,6 +49,20 @@ const dependencies = (() =>
 })();
 
 
+gulp.task('templates', () => 
+{
+	gulp.src('view/*.hbs')
+		.pipe(handlebars())
+		.pipe(wrap('Handlebars.template(<%= contents %>)'))
+		.pipe(declare({
+			namespace: 'Views',
+			noRedeclare: true,
+		}))
+		.pipe(concat('templates.js'))
+		.pipe(gulp.dest('../Public/resources'));
+});
+
+
 gulp.task('build-libs', () => 
 {
 	gulp.src('js/Libraries/*.js')
@@ -53,7 +70,7 @@ gulp.task('build-libs', () =>
 });
 
 
-gulp.task('build', ['build-libs'], () => 
+gulp.task('build', ['templates', 'build-libs'], () => 
 {
 	gulp.src(dependencies)
 		.pipe(concat('main.js'))

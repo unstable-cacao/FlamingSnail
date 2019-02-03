@@ -11,9 +11,13 @@ namespace('FlamingSnail', function (root)
 	var classify	= root.Classy.classify;
 	
 	
-	var Application					= root.Oyster.Application;
-	var TreeActionsModule			= root.Oyster.Modules.Routing.TreeActionsModule;
+	var Application			= root.Oyster.Application;
+	var TreeActionsModule	= root.Oyster.Modules.Routing.TreeActionsModule;
+	
+	var ViewModule					= root.FlamingSnail.Modules.ViewModule;
 	var HistoryJsNavigationModule	= root.FlamingSnail.Modules.HistoryJsNavigationModule;
+	
+	var Routing	= root.FlamingSnail.Config.Routing;
 	
 	
 	function setupGlobals()
@@ -35,14 +39,10 @@ namespace('FlamingSnail', function (root)
 			[
 				TreeActionsModule,
 				HistoryJsNavigationModule
+			],
+			[
+				ViewModule
 			]
-		];
-	}
-	
-	function getRoutes()
-	{
-		return [
-			
 		];
 	}
 	
@@ -52,7 +52,7 @@ namespace('FlamingSnail', function (root)
 			getModules(), 
 			(app, routing) => 
 			{
-				routing.setupRoutes(getRoutes());
+				routing.setupRoutes(Routing);
 				app.run();
 			}
 		);

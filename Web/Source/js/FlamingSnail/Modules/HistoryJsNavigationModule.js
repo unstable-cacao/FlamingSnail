@@ -66,8 +66,11 @@ namespace('FlamingSnail.Modules', function (root)
 	
 	HistoryJsNavigationModule.prototype.handleMiss = function (url)
 	{
-		console.error('Could not handle URL: ' + url);
-		this.goto('/404');
+		if (url !== '/404')
+		{
+			console.error('Could not handle URL: ' + url);
+			this.goto('/404');
+		}
 	};
 	
 	
