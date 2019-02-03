@@ -13,9 +13,7 @@
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
 		<script src="resources/fabric.min.js"></script>
-		<script src="resources/history.adapter.native.js"></script>
-		<script src="resources/history.js"></script>
-		<script src="resources/main.js?<?= rand(); ?>"></script>
+		<script src="resources/main.js?<?= ''; /*rand();*/ ?>"></script>
 		
 		<script>
 			FlamingSnail.Boot();

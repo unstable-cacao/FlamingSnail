@@ -50,10 +50,12 @@ namespace('FlamingSnail', function (root)
 	{
 		root.app = Application.create(
 			getModules(), 
-			getRoutes()
+			(app, routing) => 
+			{
+				routing.setupRoutes(getRoutes());
+				app.run();
+			}
 		);
-		
-		root.app.run();
 	}
 	
 	
@@ -63,32 +65,5 @@ namespace('FlamingSnail', function (root)
 		
 		setupGlobals();
 		startApplication();
-		
-		
-		fabric.Object.prototype.objectCaching = false;
-		
-			
-	
-		var canvas = new fabric.Canvas('main-screen');
-		var rect1 = new fabric.Rect({
-			left: 100,
-			top: 100,
-			fill: 'red',
-			width: 20,
-			height: 20,
-			angle: 45
-		});
-		
-		var rect2 = new fabric.Rect({
-			left: 50,
-			top: 50,
-			fill: 'red',
-			width: 20,
-			height: 20,
-			angle: 45
-		});
-		
-		canvas.add(rect1);
-		canvas.add(rect2);
 	};
 });

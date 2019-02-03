@@ -67,7 +67,7 @@ namespace('FlamingSnail.Modules', function (root)
 	HistoryJsNavigationModule.prototype.handleMiss = function (url)
 	{
 		console.error('Could not handle URL: ' + url);
-		this.goto('/error/not-found');
+		this.goto('/404');
 	};
 	
 	
