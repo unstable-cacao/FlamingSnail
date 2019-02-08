@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "08e9c1f2fcef15d866fff1e5bd43e373",
     "content-hash": "efdfabce56f20fc11649d25e3784bc29",
     "packages": [
         {
@@ -58,7 +59,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2017-07-22T11:58:36+00:00"
+            "time": "2017-07-22 11:58:36"
         },
         {
             "name": "myclabs/deep-copy",
@@ -106,7 +107,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-06-11T23:09:50+00:00"
+            "time": "2018-06-11 23:09:50"
         },
         {
             "name": "nategood/httpful",
@@ -156,7 +157,7 @@
                 "rest",
                 "restful"
             ],
-            "time": "2015-10-26T16:11:30+00:00"
+            "time": "2015-10-26 16:11:30"
         },
         {
             "name": "oktopost/annotation",
@@ -195,7 +196,7 @@
                 }
             ],
             "description": "Annotations library (yes, another one)",
-            "time": "2017-07-23T11:14:02+00:00"
+            "time": "2017-07-23 11:14:02"
         },
         {
             "name": "oktopost/cartograph",
@@ -241,7 +242,7 @@
                     "email": "maksym@oktopost.com"
                 }
             ],
-            "time": "2018-07-06T13:22:44+00:00"
+            "time": "2018-07-06 13:22:44"
         },
         {
             "name": "oktopost/cosmic-ray",
@@ -281,7 +282,7 @@
                 }
             ],
             "homepage": "https://github.com/Oktopost/CosmicRay",
-            "time": "2018-10-28T06:25:42+00:00"
+            "time": "2018-10-28 06:25:42"
         },
         {
             "name": "oktopost/jsonencode",
@@ -326,7 +327,7 @@
                 }
             ],
             "description": "Fix the behavior of json_encode and json_decode",
-            "time": "2018-06-17T12:16:38+00:00"
+            "time": "2018-06-17 12:16:38"
         },
         {
             "name": "oktopost/objection",
@@ -375,7 +376,7 @@
             ],
             "description": "Objects in PHP",
             "homepage": "https://github.com/Oktopost/Objection",
-            "time": "2017-10-19T05:25:35+00:00"
+            "time": "2017-10-19 05:25:35"
         },
         {
             "name": "oktopost/skeleton",
@@ -418,7 +419,7 @@
             ],
             "description": "Inversion of Control library",
             "homepage": "https://github.com/Oktopost/Skeleton",
-            "time": "2018-12-12T12:28:09+00:00"
+            "time": "2018-12-12 12:28:09"
         },
         {
             "name": "oktopost/snuggle",
@@ -466,7 +467,7 @@
             ],
             "description": "PHP connector for Couch DB",
             "homepage": "https://github.com/Oktopost/Snuggle",
-            "time": "2018-10-03T08:47:21+00:00"
+            "time": "2018-10-03 08:47:21"
         },
         {
             "name": "oktopost/squid",
@@ -522,7 +523,7 @@
             ],
             "description": "MySQL library build on top of PDO",
             "homepage": "https://github.com/Oktopost/Squid",
-            "time": "2018-11-08T07:34:09+00:00"
+            "time": "2018-11-08 07:34:09"
         },
         {
             "name": "oktopost/unit-cover",
@@ -550,7 +551,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2018-04-12T08:48:53+00:00"
+            "time": "2018-04-12 08:48:53"
         },
         {
             "name": "phar-io/manifest",
@@ -605,7 +606,7 @@
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
-            "time": "2018-07-08T19:23:20+00:00"
+            "time": "2018-07-08 19:23:20"
         },
         {
             "name": "phar-io/version",
@@ -652,7 +653,7 @@
                 }
             ],
             "description": "Library for handling version information and constraints",
-            "time": "2018-07-08T19:19:57+00:00"
+            "time": "2018-07-08 19:19:57"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -706,7 +707,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2017-09-11T18:02:19+00:00"
+            "time": "2017-09-11 18:02:19"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -757,7 +758,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-30T07:14:17+00:00"
+            "time": "2017-11-30 07:14:17"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -804,7 +805,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2017-07-14T14:27:02+00:00"
+            "time": "2017-07-14 14:27:02"
         },
         {
             "name": "phpspec/prophecy",
@@ -867,7 +868,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-08-05T17:53:17+00:00"
+            "time": "2018-08-05 17:53:17"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -930,7 +931,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-10-31T16:06:48+00:00"
+            "time": "2018-10-31 16:06:48"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -980,7 +981,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2018-09-13T20:33:42+00:00"
+            "time": "2018-09-13 20:33:42"
         },
         {
             "name": "phpunit/php-text-template",
@@ -1021,7 +1022,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21T13:50:34+00:00"
+            "time": "2015-06-21 13:50:34"
         },
         {
             "name": "phpunit/php-timer",
@@ -1070,7 +1071,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2018-02-01T13:07:23+00:00"
+            "time": "2018-02-01 13:07:23"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -1119,7 +1120,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2018-10-30T05:52:18+00:00"
+            "time": "2018-10-30 05:52:18"
         },
         {
             "name": "phpunit/phpunit",
@@ -1203,7 +1204,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-02-07T14:15:04+00:00"
+            "time": "2019-02-07 14:15:04"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1248,7 +1249,7 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2017-03-04T06:30:41+00:00"
+            "time": "2017-03-04 06:30:41"
         },
         {
             "name": "sebastian/comparator",
@@ -1312,7 +1313,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2018-07-12T15:12:46+00:00"
+            "time": "2018-07-12 15:12:46"
         },
         {
             "name": "sebastian/diff",
@@ -1368,7 +1369,7 @@
                 "unidiff",
                 "unified diff"
             ],
-            "time": "2019-02-04T06:01:07+00:00"
+            "time": "2019-02-04 06:01:07"
         },
         {
             "name": "sebastian/environment",
@@ -1421,7 +1422,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2019-02-01T05:27:49+00:00"
+            "time": "2019-02-01 05:27:49"
         },
         {
             "name": "sebastian/exporter",
@@ -1488,7 +1489,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-04-03T13:19:02+00:00"
+            "time": "2017-04-03 13:19:02"
         },
         {
             "name": "sebastian/global-state",
@@ -1539,7 +1540,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2017-04-27T15:39:26+00:00"
+            "time": "2017-04-27 15:39:26"
         },
         {
             "name": "sebastian/object-enumerator",
@@ -1586,7 +1587,7 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2017-08-03T12:35:26+00:00"
+            "time": "2017-08-03 12:35:26"
         },
         {
             "name": "sebastian/object-reflector",
@@ -1631,7 +1632,7 @@
             ],
             "description": "Allows reflection of object attributes, including inherited and non-public ones",
             "homepage": "https://github.com/sebastianbergmann/object-reflector/",
-            "time": "2017-03-29T09:07:27+00:00"
+            "time": "2017-03-29 09:07:27"
         },
         {
             "name": "sebastian/recursion-context",
@@ -1684,7 +1685,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2017-03-03T06:23:57+00:00"
+            "time": "2017-03-03 06:23:57"
         },
         {
             "name": "sebastian/resource-operations",
@@ -1726,7 +1727,7 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
-            "time": "2018-10-04T04:07:39+00:00"
+            "time": "2018-10-04 04:07:39"
         },
         {
             "name": "sebastian/version",
@@ -1769,7 +1770,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2016-10-03T07:35:21+00:00"
+            "time": "2016-10-03 07:35:21"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1827,7 +1828,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2018-08-06 14:22:27"
         },
         {
             "name": "theseer/tokenizer",
@@ -1867,7 +1868,7 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-            "time": "2017-04-07T12:08:54+00:00"
+            "time": "2017-04-07 12:08:54"
         },
         {
             "name": "unstable-cacao/itarator",
@@ -1902,7 +1903,7 @@
                     "email": "alexey@oktopost.com"
                 }
             ],
-            "time": "2017-08-02T08:53:12+00:00"
+            "time": "2017-08-02 08:53:12"
         },
         {
             "name": "unstable-cacao/narrator",
@@ -1942,7 +1943,7 @@
                     "email": "marinashers@gmail.com"
                 }
             ],
-            "time": "2018-12-31T06:25:21+00:00"
+            "time": "2018-12-31 06:25:21"
         },
         {
             "name": "unstable-cacao/structura",
@@ -1985,7 +1986,7 @@
                 }
             ],
             "homepage": "https://github.com/unstable-cacao/Structura",
-            "time": "2018-11-29T14:18:38+00:00"
+            "time": "2018-11-29 14:18:38"
         },
         {
             "name": "unstable-cacao/traitor",
@@ -2028,20 +2029,20 @@
                     "email": "marinashers@gmail.com"
                 }
             ],
-            "time": "2019-01-13T11:46:51+00:00"
+            "time": "2019-01-13 11:46:51"
         },
         {
             "name": "unstable-cacao/web-core",
-            "version": "0.1.19",
+            "version": "0.1.20",
             "source": {
                 "type": "git",
                 "url": "git@github.com:unstable-cacao/WebCore.git",
-                "reference": "0036c69f464b1c3d77ae4f5fecfe27b53c3bab58"
+                "reference": "bba82fb94e4225a8978c515c6389da245632e988"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unstable-cacao/WebCore/zipball/0036c69f464b1c3d77ae4f5fecfe27b53c3bab58",
-                "reference": "0036c69f464b1c3d77ae4f5fecfe27b53c3bab58",
+                "url": "https://api.github.com/repos/unstable-cacao/WebCore/zipball/bba82fb94e4225a8978c515c6389da245632e988",
+                "reference": "bba82fb94e4225a8978c515c6389da245632e988",
                 "shasum": ""
             },
             "require": {
@@ -2085,7 +2086,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2019-02-08T18:19:13+00:00"
+            "time": "2019-02-08 18:33:37"
         },
         {
             "name": "unstable-cacao/web-server",
@@ -2124,7 +2125,7 @@
                     "./vendor/phpunit/phpunit/phpunit --dont-report-useless-tests"
                 ]
             },
-            "time": "2019-02-08T18:17:53+00:00"
+            "time": "2019-02-08 18:17:53"
         },
         {
             "name": "webmozart/assert",
@@ -2175,7 +2176,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-12-25T11:19:39+00:00"
+            "time": "2018-12-25 11:19:39"
         }
     ],
     "packages-dev": [],
