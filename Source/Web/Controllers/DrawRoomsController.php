@@ -22,8 +22,43 @@ class DrawRoomsController
 			[],
 			jsonencode(['roomId' => RoomIdGenerator::generate()]),
 			[
-				Cookie::create('SID', SessionIdGenerator::generate(), self::SESSION_TTL)
+				Cookie::create('fss', SessionIdGenerator::generate(), self::SESSION_TTL)
 			]
+		);
+	}
+	
+	public function join(IInput $input)
+	{
+		$username = $input->withLength(1, 32)->require('username');
+		$roomID = $input->require('roomID');
+		
+		return Response::with(
+			200,
+			[],
+			null,
+			[
+				Cookie::create('fss', SessionIdGenerator::generate(), self::SESSION_TTL)
+			]
+		);
+	}
+	
+	public function update(IInput $input)
+	{
+		$changes = $input->require('changes');
+		return Response::with(200);
+	}
+	
+	public function pull(IInput $input)
+	{
+		$since = $input->require('since');
+		return Response::with(
+			200,
+			[],
+			jsonencode([
+				'changes' => [
+					'key' => 'value'
+				]
+			])
 		);
 	}
 }
