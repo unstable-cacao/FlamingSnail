@@ -17,6 +17,12 @@ namespace('FlamingSnail.Actions', function (root)
     	
     	canvas.setHeight($(window).height() - 50);
 		canvas.setWidth($(window).width() - 50);
+		
+		$(window).on('resize', () => 
+		{
+			canvas.setHeight($(window).height() - 50);
+			canvas.setWidth($(window).width() - 50);
+		});
 	};
 	
 	

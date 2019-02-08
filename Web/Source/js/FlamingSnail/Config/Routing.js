@@ -2,6 +2,7 @@ namespace('FlamingSnail.Config', function (root)
 {
 	var RootAction  	= root.FlamingSnail.Actions.RootAction;
 	var RoomAction		= root.FlamingSnail.Actions.RoomAction;
+	var DrawAction		= root.FlamingSnail.Actions.DrawAction;
 	var NotFoundAction	= root.FlamingSnail.Actions.NotFoundAction;
 	
 	
@@ -24,6 +25,14 @@ namespace('FlamingSnail.Config', function (root)
 			{
 				path: 'room/{room}',
 				action: RoomAction
+			}
+		},
+		Draw:
+		{
+			$:
+			{
+				path: 'draw',
+				action: DrawAction
 			}
 		}
 	};

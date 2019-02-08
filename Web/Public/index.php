@@ -14,7 +14,7 @@
 		<script src="/resources/fabric.min.js"></script>
 		<script src="/resources/handlebars-v4.0.12.js"></script>
 		<script src="/resources/templates.js"></script>
-		<script src="/resources/main.js?<?= ''; /*rand();*/ ?>"></script>
+		<script src="/resources/main.js?<?= filemtime(__DIR__ . '/resources/main.js'); ?>"></script>
 		
 		<script>
 			FlamingSnail.Boot();

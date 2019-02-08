@@ -33,6 +33,11 @@
             "type": "vcs",
             "url": "git@github.com:unstable-cacao/WebServer.git",
             "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:unstable-cacao/WebCore.git",
+            "no-api": true
         }
     ],
     "autoload": 
