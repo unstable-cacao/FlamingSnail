@@ -12,6 +12,6 @@ class RoomIdGenerator
 	
 	public static function generate(): string
 	{
-		return 'room' . IdGenerator::generate(13);
+		return IdGenerator::generate(13);
 	}
 }
