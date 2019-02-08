@@ -1,15 +1,25 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marina
- * Date: 08/02/19
- * Time: 21:06
- */
-
 namespace FlamingSnail\Objects\Draw;
 
 
-class Session
-{
+use Objection\LiteObject;
+use Objection\LiteSetup;
 
+
+/**
+ * @property string $Username
+ * @property string $RoomID
+ */
+class Session extends LiteObject
+{
+	/**
+	 * @return array
+	 */
+	protected function _setup()
+	{
+		return [
+			'Username' 	=> LiteSetup::createString(null),
+			'RoomID' 	=> LiteSetup::createString(null)
+		];
+	}
 }

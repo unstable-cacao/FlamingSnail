@@ -1,15 +1,31 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marina
- * Date: 08/02/19
- * Time: 21:06
- */
-
 namespace FlamingSnail\Objects\Draw;
 
 
-class Change
-{
+use Objection\LiteObject;
+use Objection\LiteSetup;
 
+
+/**
+ * @property array $Created
+ * @property array $Updated
+ * @property array $Deleted
+ * @property array $Joined
+ * @property array $Left
+ */
+class Change extends LiteObject
+{
+	/**
+	 * @return array
+	 */
+	protected function _setup()
+	{
+		return [
+			'Created'	=> LiteSetup::createArray(),
+			'Updated'	=> LiteSetup::createArray(),
+			'Deleted'	=> LiteSetup::createArray(),
+			'Joined'	=> LiteSetup::createArray(),
+			'Left'		=> LiteSetup::createArray()
+		];
+	}
 }

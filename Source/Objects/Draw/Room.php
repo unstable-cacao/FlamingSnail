@@ -1,15 +1,27 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marina
- * Date: 08/02/19
- * Time: 21:06
- */
-
 namespace FlamingSnail\Objects\Draw;
 
 
-class Room
-{
+use Objection\LiteObject;
+use Objection\LiteSetup;
 
+
+/**
+ * @property string	$ID
+ * @property int	$Revision
+ * @property array	$Data
+ */
+class Room extends LiteObject
+{
+	/**
+	 * @return array
+	 */
+	protected function _setup()
+	{
+		return [
+			'ID'		=> LiteSetup::createString(null),
+			'Revision'	=> LiteSetup::createInt(-1),
+			'Data'		=> LiteSetup::createArray()
+		];
+	}
 }
