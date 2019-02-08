@@ -10,7 +10,7 @@ namespace('FlamingSnail.Server', function (root)
 	DrawRoomConnector.prototype.create = function(username)
 	{
 		return $.post(
-			'room/create',
+			'api/room/create',
 			{
 				username: username
 			});
@@ -19,7 +19,7 @@ namespace('FlamingSnail.Server', function (root)
 	DrawRoomConnector.prototype.join = function(username, roomId)
 	{
 		return $.get(
-			'room/join',
+			'api/room/join',
 			{
 				username: username,
 				roomId: roomId
@@ -28,12 +28,12 @@ namespace('FlamingSnail.Server', function (root)
 	
 	DrawRoomConnector.prototype.update = function(changes)
 	{
-		$.post('room/update', { changes: JSON.stringify(changes) });
+		$.post('api/room/update', { changes: JSON.stringify(changes) });
 	};
 	
 	DrawRoomConnector.prototype.pull = function(after)
 	{
-		return $.get('room/pull', { after: after });
+		return $.get('api/room/pull', { after: after });
 	};
 	
 	

@@ -15,10 +15,30 @@ namespace('FlamingSnail.Actions', function (root)
 		
 		this._connector = this.component(DrawRoomConnector);
 		
+		
 		$('form#draw').on('submit', 
-			(e) => 
+			() => 
 			{
-				console.log($(e));
+				var name = $('form#draw #name').val();
+				var roomId = $('form#draw #roomId').val();
+				
+				if (roomId === '')
+				{
+					this._connector.create(name)
+						.done((data) => 
+						{
+							this.navigate('room/' + data.roomId);
+						});
+				}
+				else 
+				{
+					this._connector.join(name, roomId)
+						.done((data) => 
+						{
+							this.navigate('room/' + data.roomId);
+						});
+				}
+				
 				return false;
 			});
 	};
