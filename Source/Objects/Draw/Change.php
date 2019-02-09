@@ -7,11 +7,12 @@ use Objection\LiteSetup;
 
 
 /**
- * @property array $Created
- * @property array $Updated
- * @property array $Deleted
- * @property array $Joined
- * @property array $Left
+ * @property string $RoomID
+ * @property array 	$Created
+ * @property array 	$Updated
+ * @property array 	$Deleted
+ * @property array 	$Joined
+ * @property array 	$Left
  */
 class Change extends LiteObject
 {
@@ -21,6 +22,7 @@ class Change extends LiteObject
 	protected function _setup()
 	{
 		return [
+			'RoomID'	=> LiteSetup::createString(null),
 			'Created'	=> LiteSetup::createArray(),
 			'Updated'	=> LiteSetup::createArray(),
 			'Deleted'	=> LiteSetup::createArray(),
