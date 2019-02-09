@@ -9,6 +9,7 @@ use Objection\LiteSetup;
 /**
  * @property string $Username
  * @property string $RoomID
+ * @property string	$SessionID
  */
 class Session extends LiteObject
 {
@@ -19,7 +20,8 @@ class Session extends LiteObject
 	{
 		return [
 			'Username' 	=> LiteSetup::createString(null),
-			'RoomID' 	=> LiteSetup::createString(null)
+			'RoomID' 	=> LiteSetup::createString(null),
+			'SessionID'	=> LiteSetup::createString(null)
 		];
 	}
 }
